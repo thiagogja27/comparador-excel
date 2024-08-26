@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparador de Arquivos Teg Teag</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Comparador de Arquivos Teg Teag</h1>
+      </header>
+      <main>
+        <div class="file-inputs">
+          <label for="file1" class="file-label">Arquivo Excel 1:</label>
+          <input
+            type="file"
+            id="file1"
+            accept=".xlsx, .xls"
+            class="file-input"
+          />
+          <label for="file2" class="file-label">Arquivo Excel 2:</label>
+          <input
+            type="file"
+            id="file2"
+            accept=".xlsx, .xls"
+            class="file-input"
+          />
+        </div>
+        <div class="buttons">
+          <button id="generateReport" class="btn">
+            Gerar Relatório em Excel
+          </button>
+          <button id="generatePDF" class="btn">Gerar Mapa PDF</button>
+        </div>
+        <div id="result" class="table-container"></div>
+      </main>
+    </div>
+  </body>
+</html>
